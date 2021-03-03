@@ -83,7 +83,7 @@ render(){
     return (
         <>
           <SearchBox handleChange={this.handleChange} handleSelected={this.handleSelected} input={this.state.input} autoComplete={this.state.autoComplete}  />
-          <WeeklyForecast location={this.state.location} current={this.state.current} />
+          <WeeklyForecast location={this.state.location} current={this.state.current} forecast={this.state.forecast} />
         </>
     );
 }
