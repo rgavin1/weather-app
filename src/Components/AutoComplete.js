@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-const AutoComplete = ({ autoComplete }) => {
+const AutoComplete = ({ autoComplete, handleSelected }) => {
     return <ul>{autoComplete.map((city) => 
-                <li key={city.id}>{city.name}</li>
+                <li onClick={handleSelected} key={city.id} value={city.name}>{city.name}</li>
             )}</ul>
 }
 

@@ -1,14 +1,11 @@
 import React from 'react';
 import AutoComplete from './AutoComplete';
 
-const SearchBox = ({ handleSubmit, handleChange, input, autoComplete }) => {
+const SearchBox = ({ handleChange, handleSelected, input, autoComplete }) => {
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <input type="text" value={input} onChange={handleChange} />
-                <input type="submit" value="find" />
-            </form>
-            <AutoComplete autoComplete={autoComplete} />
+            <input type="text" value={input} onChange={handleChange} />
+            <AutoComplete autoComplete={autoComplete} handleSelected={handleSelected} />
         </>
     );
 }
