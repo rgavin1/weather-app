@@ -1,5 +1,6 @@
 import './App.css';
 import NavBar from './Components/NavBar';
+import Header from './Components/Header';
 import Body from './Components/Body';
 import Footer from './Components/Footer';
 import React, { Component } from 'react';
@@ -84,7 +85,8 @@ render(){
     return (
         <>
           <NavBar />
-          <Body handleChange={this.handleChange} handleSelected={this.handleSelected} input={this.state.input} autoComplete={this.state.autoComplete} location={this.state.location} current={this.state.current} forecast={this.state.forecast} />
+          <Header handleChange={this.handleChange} handleSelected={this.handleSelected} input={this.state.input} autoComplete={this.state.autoComplete} location={this.state.location} current={this.state.current} forecast={this.state.forecast} />
+          <Body />
           <Footer />
         </>
     );

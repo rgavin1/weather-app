@@ -1,0 +1,18 @@
+.header {
+    background: #00000033;
+    background-image: url('../images/osman-rana-HOtPD7Z_74s-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+    background-blend-mode: overlay;
+    padding: 10% 0;
+    position: relative;
+}
+.header input {
+    background: rgb(28,30,38);
+    color: #fff !important;
+    width: 80%;
+    padding: 1%;
+    border-radius: 30px;
+    border: none;
+}

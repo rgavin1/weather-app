@@ -1,0 +1,18 @@
+.autoComplete {
+    background: rgb(28,30,38);
+    color: #fff;
+    list-style: none;
+    width: 78%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    outline: none;
+}
+.autoComplete li {
+    text-align: start;
+    margin: 15px 0;
+    cursor: pointer;
+}
