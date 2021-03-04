@@ -1,6 +1,7 @@
-// import './App.css';
+import './App.css';
 import SearchBox from './Components/SearchBox';
 import WeeklyForecast from './Components/WeeklyForecast';
+import NavBar from './Components/NavBar';
 import React, { Component } from 'react';
 
 class App extends Component {
@@ -82,6 +83,7 @@ handleChange(event){
 render(){
     return (
         <>
+          <NavBar />
           <SearchBox handleChange={this.handleChange} handleSelected={this.handleSelected} input={this.state.input} autoComplete={this.state.autoComplete}  />
           <WeeklyForecast location={this.state.location} current={this.state.current} forecast={this.state.forecast} />
         </>
