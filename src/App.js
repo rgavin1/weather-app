@@ -23,7 +23,7 @@ class App extends Component {
 
 fetchLocation(input){
   if(input){
-    fetch(`https://api.weatherapi.com/v1/search.json?key=ae1a371112b745cf81e134729212802&q=${input}`)
+    fetch(`https://api.weatherapi.com/v1/search.json?key=&q=${input}`)
     .then(res => res.json())
     .then((results) => {
       this.setState({
@@ -43,7 +43,7 @@ fetchLocation(input){
 
 fetchForecast(city){
   if(city){
-    fetch(`https://api.weatherapi.com/v1/forecast.json?key=ae1a371112b745cf81e134729212802&q=${city}&days=7&aqi=no&alerts=no`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=&q=${city}&days=7&aqi=no&alerts=no`)
     .then(res => res.json())
     .then((results) => {
       this.setState({
