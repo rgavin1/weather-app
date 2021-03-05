@@ -32,7 +32,6 @@
 }
 .weeklyforecast__container.left {
   flex: 1;
-  max-width: 190px;
 }
 .weeklyforecast h1 {
   margin-top: 0;
