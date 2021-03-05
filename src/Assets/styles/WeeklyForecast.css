@@ -1,0 +1,10 @@
+.weeklyforeecast {
+  background: rgb(107 107 107);
+  width: 80%;
+  margin: -5% auto 0;
+  position: relative;
+  z-index: 1;
+}
+.weeklyforeecast h1 {
+  margin-top: 0;
+}

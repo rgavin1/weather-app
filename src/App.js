@@ -85,8 +85,8 @@ render(){
     return (
         <>
           <NavBar />
-          <Header handleChange={this.handleChange} handleSelected={this.handleSelected} input={this.state.input} autoComplete={this.state.autoComplete} location={this.state.location} current={this.state.current} forecast={this.state.forecast} />
-          <Body />
+          <Header handleChange={this.handleChange} handleSelected={this.handleSelected} input={this.state.input} autoComplete={this.state.autoComplete}  />
+          <Body location={this.state.location} current={this.state.current} forecast={this.state.forecast} />
           <Footer />
         </>
     );

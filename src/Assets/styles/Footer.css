@@ -1,0 +1,8 @@
+.footer {
+    background: rgb(39,41,53);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

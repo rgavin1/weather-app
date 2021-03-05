@@ -11,8 +11,7 @@ const IconImage = ({ image }) => {
 
 const Forecast = ({ forecast, location }) => {
     const list = forecast.forecastday;
-    console.log(list);
-    return <>
+    return <div className="weeklyforeecast">
         <h1>{ location.name }</h1> 
         <ul>
             {
@@ -29,7 +28,7 @@ const Forecast = ({ forecast, location }) => {
                 : ''
             }
         </ul>
-    </>
+    </div>
 }
 
 const WeeklyForecast = ({ location, current, forecast }) => {
