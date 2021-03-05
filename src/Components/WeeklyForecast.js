@@ -14,7 +14,7 @@ const IconImage = ({ image }) => {
 const CurrentTemp = ({ temp }) => {
   return (
     <>
-      <h2>{temp}F</h2>
+      <h2>{temp}°F</h2>
     </>
   );
 };
@@ -43,7 +43,7 @@ const Forecast = ({ forecast, location, current }) => {
                         </div>
                     </div>
                   </div>
-                  <div className="weeklyforecast__container">
+                  <div className="weeklyforecast__container right">
                     <IconImage image={item.day.condition} />
                   </div>
                 </div>

@@ -19,15 +19,23 @@
   display: flex;
 }
 .weeklyforecast__container {
-  flex: 1;
-  align-self: center;
+    flex: 1;
+    align-self: center;
+}
+.weeklyforecast__container img {
+    display: block;
+    margin: 0 auto;
+}
+.weeklyforecast__container.right h1 {
+    padding: 0;
+    text-align: center;
 }
 .weeklyforecast__container.left {
   flex: 1;
+  max-width: 190px;
 }
 .weeklyforecast h1 {
-  padding-top: 5%;
-  padding-left: 30px;
+  margin-top: 0;
   color: #9a9a9a;
   font-size: 30px;
   font-weight: 300;
@@ -35,6 +43,7 @@
 .weeklyforecast h2 {
   font-size: 70px;
   color: #fff;
+  margin-top: 0px;
   margin-bottom: 20px;
 }
 .weeklyforecast ul {
