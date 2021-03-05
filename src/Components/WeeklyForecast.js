@@ -32,10 +32,16 @@ const Forecast = ({ forecast, location, current }) => {
                   <div className="weeklyforecast__container left">
                     <h1>{location.name}</h1>
                     <CurrentTemp temp={current} />
-                    <FontAwesomeIcon icon={faUmbrella} />
-                    {item.day.daily_chance_of_rain}%
-                    <FontAwesomeIcon icon={faWind} />
-                    {item.day.maxwind_mph} mph
+                    <div className="weeklyforecast__container__meta">
+                        <div className="weeklyforecast__container__meta--container rain">
+                            <FontAwesomeIcon icon={faUmbrella} />
+                            <h5>{item.day.daily_chance_of_rain} %</h5>
+                        </div>
+                        <div className="weeklyforecast__container__meta--container wind">
+                            <FontAwesomeIcon icon={faWind} />
+                            <h5>{item.day.maxwind_mph} mph</h5>
+                        </div>
+                    </div>
                   </div>
                   <div className="weeklyforecast__container">
                     <IconImage image={item.day.condition} />
