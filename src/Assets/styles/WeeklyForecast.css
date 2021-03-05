@@ -6,7 +6,7 @@
   min-height: 260px;
   height: auto;
   z-index: 1;
-  border-radius: 30px;
+  border-radius: 10px;
   overflow: hidden;
 }
 .weeklyforecast__date {
