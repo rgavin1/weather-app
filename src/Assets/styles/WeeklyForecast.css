@@ -14,6 +14,7 @@
   padding: 15px 0;
   color: #808080;
   font-size: 20px;
+  text-align: center;
 }
 .weeklyforecast__wrapper {
   display: flex;
@@ -57,20 +58,33 @@
 .weeklyforecast ul li:first-child {
   flex: 2;
 }
-.weeklyforecast ul li {
+/* .weeklyforecast ul li {
   flex: 1;
-}
+} */
 .weeklyforecast ul li:nth-child(2) .weeklyforecast__wrapper,
 .weeklyforecast ul li:nth-child(3) .weeklyforecast__wrapper {
   flex-direction: column;
 }
-.weeklyforecast ul li:nth-child(2) .weeklyforecast__container.left,
-.weeklyforecast ul li:nth-child(3) .weeklyforecast__container.left {
-  order: 1;
+.weeklyforecast ul li:nth-child(2),
+.weeklyforecast ul li:nth-child(3) {
+  display: flex;
+  flex-direction: column;
 }
-.weeklyforecast ul li:nth-child(2) .weeklyforecast__container.right,
-.weeklyforecast ul li:nth-child(3) .weeklyforecast__container.right {
-  order: 0;
+.weeklyforecast ul li:nth-child(2) h3,
+.weeklyforecast ul li:nth-child(3) h3 {
+  order: 1;
+  text-align: center;
+  color: #fff;
+  font-size: 40px;
+  margin: 15px;
+}
+.weeklyforecast ul li:nth-child(2) h4,
+.weeklyforecast ul li:nth-child(3) h4 {
+  order: 2;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  margin: 0;
 }
 .weeklyforecast ul li:nth-child(2) h1,
 .weeklyforecast ul li:nth-child(3) h1,

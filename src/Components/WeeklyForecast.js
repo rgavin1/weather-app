@@ -37,9 +37,17 @@ const GetTemp = ({ temp, id, maxtemp, mintemp }) => {
   if(id <= 0){
       output = <CurrentTemp temp={get_rounded_num} />;
   } else { 
-      output = <FollowingDayTemp maxtemp={maxtemp} mintemp={mintemp}/>;
+      output = <FollowingDayTemp maxtemp={maxtemp} mintemp={mintemp} />;
   }
   return output;
+};
+
+const GetDay = ({ id }) => {
+  var today = new Date();
+  var index = today.getDay();
+  const list_of_days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const output_day = list_of_days[index + id];
+  return output_day;
 };
 
 
@@ -52,7 +60,9 @@ const Forecast = ({ forecast, location, current, winddirection }) => {
         {list
           ? list.map((item, id) => (
               <li key={id}>
-                <div className="weeklyforecast__date">{item.date}</div>
+                <div className="weeklyforecast__date">
+                  <GetDay id={id} />
+                </div>
                 <GetTemp temp={current} id={id} maxtemp={item.day.maxtemp_f} mintemp={item.day.mintemp_f} />
                 <div className="weeklyforecast__wrapper">
                   <div className="weeklyforecast__container left">
