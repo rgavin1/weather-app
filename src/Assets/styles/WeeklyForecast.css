@@ -92,6 +92,14 @@
 .weeklyforecast ul li:nth-child(3) .weeklyforecast__container__meta {
   display: none;
 }
+.weeklyforecast ul li:nth-child(1) .weeklyforecast__date {
+  display: block;
+  width: 100%;
+}
+.weeklyforecast ul li:nth-child(1) .weeklyforecast__wrapper,
+.weeklyforecast ul li:nth-child(1) .weeklyforecast__container.right {
+  display: inline-block;
+}
 .weeklyforecast ul li:nth-child(odd) .weeklyforecast__date {
   background: rgb(46, 48, 60);
 }

@@ -63,10 +63,10 @@ const Forecast = ({ forecast, location, current, winddirection }) => {
                 <div className="weeklyforecast__date">
                   <GetDay id={id} />
                 </div>
-                <GetTemp temp={current} id={id} maxtemp={item.day.maxtemp_f} mintemp={item.day.mintemp_f} />
                 <div className="weeklyforecast__wrapper">
                   <div className="weeklyforecast__container left">
                     <h1>{location.name}</h1>
+                <GetTemp temp={current} id={id} maxtemp={item.day.maxtemp_f} mintemp={item.day.mintemp_f} />
                     <div className="weeklyforecast__container__meta">
                         <div className="weeklyforecast__container__meta--container rain">
                             <FontAwesomeIcon icon={faUmbrella} />
@@ -82,10 +82,10 @@ const Forecast = ({ forecast, location, current, winddirection }) => {
                         </div>
                     </div>
                   </div>
+                  </div>
                   <div className="weeklyforecast__container right">
                     <IconImage image={item.day.condition} />
                   </div>
-                </div>
               </li>
             ))
           : ""}
