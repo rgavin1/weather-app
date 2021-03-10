@@ -41,7 +41,7 @@
   font-weight: 300;
 }
 .weeklyforecast h2 {
-  font-size: 70px;
+  font-size: 8vw;
   color: #fff;
   margin-top: 0px;
   margin-bottom: 20px;
@@ -60,8 +60,22 @@
 .weeklyforecast ul li {
   flex: 1;
 }
+.weeklyforecast ul li:nth-child(2) .weeklyforecast__wrapper,
+.weeklyforecast ul li:nth-child(3) .weeklyforecast__wrapper {
+  flex-direction: column;
+}
+.weeklyforecast ul li:nth-child(2) .weeklyforecast__container.left,
+.weeklyforecast ul li:nth-child(3) .weeklyforecast__container.left {
+  order: 1;
+}
+.weeklyforecast ul li:nth-child(2) .weeklyforecast__container.right,
+.weeklyforecast ul li:nth-child(3) .weeklyforecast__container.right {
+  order: 0;
+}
 .weeklyforecast ul li:nth-child(2) h1,
-.weeklyforecast ul li:nth-child(3) h1 {
+.weeklyforecast ul li:nth-child(3) h1,
+.weeklyforecast ul li:nth-child(2) .weeklyforecast__container__meta,
+.weeklyforecast ul li:nth-child(3) .weeklyforecast__container__meta {
   display: none;
 }
 .weeklyforecast ul li:nth-child(odd) .weeklyforecast__date {
@@ -74,11 +88,15 @@
   background: rgb(39, 41, 53);
 }
 .weeklyforecast__container__meta {
-    display: flex;
-    justify-content: space-between;
-    width: 80%;
+  display: flex;
+  justify-content: space-between;
+  color: #898989;
+}
+.weeklyforecast__container__meta h5 {
+  margin: 0 0 20px 5px;
 }
 .weeklyforecast__container__meta--container > * {
     display: inline-block;
-    font-size: 18px;
+    font-size: 26px;
+    font-weight: 300;
 }

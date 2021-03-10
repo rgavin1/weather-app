@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWind, faUmbrella } from "@fortawesome/free-solid-svg-icons";
+import { faWind, faUmbrella, faCompass } from "@fortawesome/free-solid-svg-icons";
 
 const IconImage = ({ image }) => {
   return (
@@ -12,14 +12,39 @@ const IconImage = ({ image }) => {
 };
 
 const CurrentTemp = ({ temp }) => {
+  const get_rounded_num = Math.round(temp);
   return (
     <>
-      <h2>{temp}°F</h2>
+      <h2>{get_rounded_num}°F</h2>
     </>
   );
 };
 
-const Forecast = ({ forecast, location, current }) => {
+const FollowingDayTemp = ({ maxtemp, mintemp }) => {
+  const get_rounded_maxtemp = Math.round(maxtemp);
+  const get_rounded_mintemp = Math.round(mintemp);
+  return (
+    <>
+      <h3>{get_rounded_maxtemp}°F</h3>
+      <h4>{get_rounded_mintemp}°F</h4>
+    </>
+  );
+};
+
+const GetTemp = ({ temp, id, maxtemp, mintemp }) => {
+  const get_rounded_num = Math.round(temp);
+  let output = '';
+  if(id <= 0){
+      output = <CurrentTemp temp={get_rounded_num} />;
+  } else { 
+      output = <FollowingDayTemp maxtemp={maxtemp} mintemp={mintemp}/>;
+  }
+  return output;
+};
+
+
+
+const Forecast = ({ forecast, location, current, winddirection }) => {
   const list = forecast.forecastday;
   return (
     <div className="weeklyforecast">
@@ -28,10 +53,10 @@ const Forecast = ({ forecast, location, current }) => {
           ? list.map((item, id) => (
               <li key={id}>
                 <div className="weeklyforecast__date">{item.date}</div>
+                <GetTemp temp={current} id={id} maxtemp={item.day.maxtemp_f} mintemp={item.day.mintemp_f} />
                 <div className="weeklyforecast__wrapper">
                   <div className="weeklyforecast__container left">
                     <h1>{location.name}</h1>
-                    <CurrentTemp temp={current} />
                     <div className="weeklyforecast__container__meta">
                         <div className="weeklyforecast__container__meta--container rain">
                             <FontAwesomeIcon icon={faUmbrella} />
@@ -40,6 +65,10 @@ const Forecast = ({ forecast, location, current }) => {
                         <div className="weeklyforecast__container__meta--container wind">
                             <FontAwesomeIcon icon={faWind} />
                             <h5>{item.day.maxwind_mph} mph</h5>
+                        </div>
+                        <div className="weeklyforecast__container__meta--container winddirection">
+                            <FontAwesomeIcon icon={faCompass} />
+                            <h5>{winddirection}</h5>
                         </div>
                     </div>
                   </div>
@@ -61,6 +90,7 @@ const WeeklyForecast = ({ location, current, forecast }) => {
       <Forecast
         forecast={forecast}
         current={current.temp_f}
+        winddirection={current.wind_dir}
         location={location}
       />
     </div>
