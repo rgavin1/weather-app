@@ -1,0 +1,16 @@
+.imagewrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  max-width: 990px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+.image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 16%;
+}
