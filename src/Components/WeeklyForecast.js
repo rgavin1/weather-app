@@ -71,22 +71,22 @@ const Forecast = ({ forecast, location, current, winddirection }) => {
                     <GetTemp temp={current} id={id} maxtemp={item.day.maxtemp_f} mintemp={item.day.mintemp_f} />
                     <div className="weeklyforecast__container__meta">
                         <div className="weeklyforecast__container__meta--container rain">
-                          <span className="icon-wrapper">
+                          {/* <span className="icon-wrapper"> */}
                             <FontAwesomeIcon icon={faUmbrella} />
                             <h5>{item.day.daily_chance_of_rain} %</h5>
-                          </span>
+                          {/* </span> */}
                         </div>
                         <div className="weeklyforecast__container__meta--container wind">
-                          <span className="icon-wrapper">
+                          {/* <span className="icon-wrapper"> */}
                             <FontAwesomeIcon icon={faWind} />
                             <h5>{item.day.maxwind_mph} mph</h5>
-                          </span>
+                          {/* </span> */}
                         </div>
                         <div className="weeklyforecast__container__meta--container winddirection">
-                          <span className="icon-wrapper">
+                          {/* <span className="icon-wrapper"> */}
                             <FontAwesomeIcon icon={faCompass} />
                             <h5>{winddirection}</h5>
-                          </span>
+                          {/* </span> */}
                         </div>
                     </div>
                   </div>
