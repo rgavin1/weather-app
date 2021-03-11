@@ -63,29 +63,38 @@ const Forecast = ({ forecast, location, current, winddirection }) => {
                 <div className="weeklyforecast__date">
                   <GetDay id={id} />
                 </div>
+                {/* City */}
+                <h1>{location.name}</h1>
                 <div className="weeklyforecast__wrapper">
+                  {/* Meta Left */}
                   <div className="weeklyforecast__container left">
-                    <h1>{location.name}</h1>
-                <GetTemp temp={current} id={id} maxtemp={item.day.maxtemp_f} mintemp={item.day.mintemp_f} />
+                    <GetTemp temp={current} id={id} maxtemp={item.day.maxtemp_f} mintemp={item.day.mintemp_f} />
                     <div className="weeklyforecast__container__meta">
                         <div className="weeklyforecast__container__meta--container rain">
+                          <span className="icon-wrapper">
                             <FontAwesomeIcon icon={faUmbrella} />
                             <h5>{item.day.daily_chance_of_rain} %</h5>
+                          </span>
                         </div>
                         <div className="weeklyforecast__container__meta--container wind">
+                          <span className="icon-wrapper">
                             <FontAwesomeIcon icon={faWind} />
                             <h5>{item.day.maxwind_mph} mph</h5>
+                          </span>
                         </div>
                         <div className="weeklyforecast__container__meta--container winddirection">
+                          <span className="icon-wrapper">
                             <FontAwesomeIcon icon={faCompass} />
                             <h5>{winddirection}</h5>
+                          </span>
                         </div>
                     </div>
                   </div>
-                  </div>
+                  {/* Meta Right */}
                   <div className="weeklyforecast__container right">
                     <IconImage image={item.day.condition} />
                   </div>
+                </div> 
               </li>
             ))
           : ""}
