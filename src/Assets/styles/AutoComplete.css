@@ -2,13 +2,14 @@
     background: rgb(28,30,38);
     color: #fff;
     list-style: none;
-    width: 78%;
+    width: 80%;
+    max-width: 920px;
     margin: 0 auto;
     position: absolute;
     bottom: auto;
     left: 50%;
     transform: translateX(-50%);
-    border-radius: 10px;
+    border-radius: 0;
     outline: none;
     z-index: 2;
 }
