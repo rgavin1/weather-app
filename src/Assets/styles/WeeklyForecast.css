@@ -1,6 +1,7 @@
 .weeklyforecast {
   background: rgb(51, 53, 67);
   width: 85%;
+  max-width: 1000px;
   margin: -5% auto 215px;
   position: relative;
   min-height: 260px;
