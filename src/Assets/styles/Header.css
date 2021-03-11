@@ -12,6 +12,7 @@
     background: rgb(28,30,38);
     color: #fff !important;
     width: 80%;
+    max-width: 975px;
     padding: 18px;
     border-radius: 100px;
     border: none;
