@@ -17,19 +17,18 @@
   font-size: 20px;
   text-align: center;
 }
-x
-.weeklyforecast__container {
-    flex: 1;
-    align-self: center;
+x .weeklyforecast__container {
+  flex: 1;
+  align-self: center;
 }
 .weeklyforecast__container img {
-    display: block;
-    margin: 0 auto;
-    width: 100px;
+  display: block;
+  margin: 0 auto;
+  width: 50px;
 }
 .weeklyforecast__container.right h1 {
-    padding: 0;
-    text-align: center;
+  padding: 0;
+  text-align: center;
 }
 .weeklyforecast__container.left {
   flex: 1;
@@ -56,6 +55,7 @@ x
   margin: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -126,10 +126,34 @@ x
   margin: 0 0 20px 5px;
 }
 .weeklyforecast__container__meta--container > * {
-    display: inline-block;
-    font-size: 26px;
-    font-weight: 300;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 300;
 }
 .icon-wrapper {
   white-space: nowrap;
+}
+
+@media screen and (max-width: 1042px) {
+  .weeklyforecast__container__meta--container {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  .weeklyforecast ul {
+    flex-direction: column;
+  }
+  .weeklyforecast h1 {
+    font-size: 2.5vmax;
+  }
+  .weeklyforecast__container.left {
+    max-width: unset;
+  }
+  .weeklyforecast ul li:nth-child(1) .weeklyforecast__container.right {
+    flex: 1;
+  }
+  .weeklyforecast ul li:nth-child(2) .weeklyforecast__wrapper,
+  .weeklyforecast ul li:nth-child(3) .weeklyforecast__wrapper {
+    margin: 15px auto;
+  }
 }

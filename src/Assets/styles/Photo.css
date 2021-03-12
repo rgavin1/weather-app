@@ -1,12 +1,20 @@
 .imagewrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: .5em;
   max-width: 990px;
+  width: 85%;
   margin: 0 auto;
   list-style: none;
   padding: 0;
   justify-content: center;
+}
+.title {
+  color: #fff;
+  font-size: 54px;
+  max-width: 986px;
+  width: 85%;
+  margin: -15% auto 20px;
 }
 .image {
   background-size: cover;

@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="container">
             <div className="grid">
                 <div className="col-">
-                    <p>Built by Ramsey Gavin, Designed by Themezy, Powered by Weather Api (IMAGE HERE)</p>
+                    <p>Built by Ramsey Gavin, Powered by Weather Api and Unsplash </p>
                 </div>
             </div>
         </div>
