@@ -4,6 +4,10 @@ import Header from './Components/Header';
 import Body from './Components/Body';
 import Footer from './Components/Footer';
 import React, { Component } from 'react';
+require('dotenv').config()
+
+
+console.log(process.env.REACT_APP_WEATHER_API_KEY);
 
 class App extends Component {
   constructor(props){
